@@ -1,0 +1,22 @@
+:root {
+  /* Colors */
+  --color-bg: #789ebf;
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.9);
+
+  /* Glow accents */
+  --glow-gold: rgba(220, 190, 80, 0.6);
+  --glow-pink: rgba(180, 120, 140, 0.5);
+  --glow-purple: rgba(150, 100, 180, 0.5);
+
+  /* Breakpoint reference (use in JS via getComputedStyle or just hard-code 480) */
+  --breakpoint-mobile: 480px;
+
+  /* Typography */
+  --font-primary: Helvetica, Arial, sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+
+  /* Transitions */
+  --transition-default: 0.3s ease;
+  --transition-slow: 0.4s ease;
+}
