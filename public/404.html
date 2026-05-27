@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ilze apine</title>
+  <script>
+    // GitHub Pages serves this file for any unknown route.
+    // Store the full path in sessionStorage and redirect to /
+    // so Vue Router can pick it up on load.
+    sessionStorage.setItem('redirectPath', location.pathname + location.search + location.hash)
+    location.replace('/')
+  </script>
+</head>
+<body></body>
+</html>

@@ -33,7 +33,7 @@ const routes = [
   }
 ]
 
-export default createRouter({
+const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
@@ -41,3 +41,19 @@ export default createRouter({
     return { top: 0 }
   }
 })
+
+// Handle GitHub Pages 404 redirect.
+// When a user lands on e.g. ilzeapine.com/paintings directly,
+// GitHub Pages serves 404.html which stores the path and redirects to /.
+// Here we pick that path up and navigate to it via Vue Router.
+router.beforeEach((to) => {
+  const redirectPath = sessionStorage.getItem('redirectPath')
+  if (redirectPath) {
+    sessionStorage.removeItem('redirectPath')
+    if (redirectPath !== to.fullPath) {
+      return redirectPath
+    }
+  }
+})
+
+export default router
