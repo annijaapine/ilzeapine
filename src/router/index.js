@@ -2,12 +2,14 @@ import { createRouter, createWebHistory } from 'vue-router'
 import TemporaryLandingView from '@/views/TemporaryLandingView.vue'
 import HomeView from '@/views/HomeView.vue'
 import MediaView from '@/views/MediaView.vue'
+import { SITE_LIVE } from '@/config.js'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: TemporaryLandingView // swap back to HomeView when the full site is ready
+    // To launch the full site: set SITE_LIVE = true in src/config.js
+    component: SITE_LIVE ? HomeView : TemporaryLandingView
   },
   {
     path: '/stained-glass',
