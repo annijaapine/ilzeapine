@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import TemporaryLandingView from '@/views/TemporaryLandingView.vue'
 import HomeView from '@/views/HomeView.vue'
 import MediaView from '@/views/MediaView.vue'
 
@@ -6,7 +7,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: TemporaryLandingView // swap back to HomeView when the full site is ready
   },
   {
     path: '/stained-glass',

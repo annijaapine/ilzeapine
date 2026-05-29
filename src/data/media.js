@@ -13,8 +13,8 @@ export const artist = {
   name: 'ilze apine',
   bio: 'Artist bio placeholder — describe Ilze\'s background, inspiration, and practice here.',
   links: [
-    { label: 'instagram', url: 'https://instagram.com/' },
-    { label: 'contact',   url: 'mailto:hello@ilzeapine.com' }
+    { label: 'instagram', url: 'https://www.instagram.com/glassbyilze' },
+    { label: 'contact',   url: 'mailto:glassbyilze@gmail.com' }
   ]
 }
 
